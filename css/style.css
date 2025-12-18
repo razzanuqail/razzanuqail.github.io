@@ -12,11 +12,14 @@
   border: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: #fff;
-  min-height: 2000px;
 }
 
 .navbar {
@@ -139,17 +142,23 @@ body {
 }
 
 /* About section */
-.about {
+.about,
+.reservasi,
+.contact {
   padding: 8rem 7% 1.4rem;
 }
 
-.about h2 {
+.about h2,
+.reservasi h2,
+.contact h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
 }
 
-.about h2 span {
+.about h2 span,
+.reservasi h2 span,
+.contact h2 span {
   color: var(--primary-color);
 }
 
@@ -191,6 +200,223 @@ body {
   line-height: 1.6;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.3);
   color: #65340e;
+}
+
+/* reservation section */
+.reservasi p {
+  font-size: 1.4rem;
+  margin-bottom: 0rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.3);
+  color: #65340e;
+  text-align: center;
+}
+
+.reservasi .row form {
+  flex: 1 1 45rem;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.reservasi .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  background-color: #442010;
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+.reservasi .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: #442010;
+  color: #fff;
+}
+
+.reservasi .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.reservasi .row .input-group .date-input-wrapper {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+/* Style the input field */
+input[type="date"] {
+  padding: 10px 10px 10px 40px;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  margin: 0 0 0 20px;
+}
+
+/* Custom Icon */
+.calendar-icon {
+  position: absolute;
+  left: 1px;
+  pointer-events: none;
+  color: #ffffff;
+  padding: 0;
+}
+
+/* Hide default icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 1px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0; /* Clickable but invisible */
+}
+
+.reservasi .row .input-group .time-input-wrapper {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+/* Style the input field */
+input[type="time"] {
+  padding: 10px 10px 10px 40px;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  margin: 0 0 0 20px;
+}
+
+/* Custom Icon */
+.clock-icon {
+  position: absolute;
+  left: 1px;
+  pointer-events: none;
+  color: #ffffff;
+  padding: 0;
+}
+
+/* Hide default icon */
+input[type="time"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: -35px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0; /* Clickable but invisible */
+}
+
+/* contact section */
+.contact h2 {
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-size: 1.5rem;
+}
+
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #222;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: #000000;
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #fff;
+}
+
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* footer section */
+footer {
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--bg);
+}
+
+footer .links {
+  margin-bottom: 1.3rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
 }
 
 /*media queries*/
@@ -258,6 +484,22 @@ body {
   .about .row .content h3 {
     margin-top: 1rem;
     font-size: 1.7rem;
+  }
+
+  .reservasi p {
+    font-size: 1.2rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 30rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
   }
 }
 
