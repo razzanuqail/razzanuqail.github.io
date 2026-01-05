@@ -19,6 +19,13 @@
     <!-- Style -->
 
     <link rel="stylesheet" href="css/style.css" />
+
+    <!--AlpineJS-->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- App -->
+     <script src="src/app.js" async></script>
+
   </head>
   <body>
     <!-- Navbar Start -->
@@ -81,19 +88,29 @@
       <p>Reserve your table</p>
 
       <div class="row">
-        <form action="">
+        <form action="" id="checkoutForm">
+          <label for="name">
           <div class="input-group">
             <i data-feather="user"></i>
-            <input type="text" placeholder="nama lengkap" />
+            <input type="text" placeholder="nama lengkap" name="name" id="name" />
           </div>
+          </label>
+          
+          <label for="email">
           <div class="input-group">
             <i data-feather="mail"></i>
-            <input type="text" placeholder="email" />
+            <input type="text" placeholder="email" name="email" id="email"/>
           </div>
+          </label>
+
+          <label for="phone">
           <div class="input-group">
             <i data-feather="phone"></i>
-            <input type="text" placeholder="no telpon" />
+            <input type="text" placeholder="no telpon" name="phone" id="phone" autocomplete="off" />
           </div>
+          </label>
+
+          <label for="date">
           <div class="input-group">
             <div class="date-input-wrapper">
               <svg
@@ -114,9 +131,12 @@
                 <line x1="3" y1="10" x2="21" y2="10"></line>
               </svg>
 
-              <input type="date" id="date-picker" />
+              <input type="date" id="date-picker" name="date" />
             </div>
           </div>
+          </label>
+
+          <label for="time">
           <div class="input-group">
             <div class="time-input-wrapper">
               <svg
@@ -135,14 +155,19 @@
                 <polyline points="12 6 12 12 16 14"></polyline>
               </svg>
 
-              <input type="time" id="time-picker" />
+              <input type="time" id="time-picker" name="time"/>
             </div>
           </div>
+          </label>
+
+          <label for="jumlahorang"></label>
           <div class="input-group">
             <i data-feather="users"></i>
-            <input type="number" placeholder="jumlah orang" />
+            <input type="number" placeholder="jumlah orang" name="jumlahorang" id="jumlahorang" />
           </div>
-          <button type="submit" class="btn">pesan sekarang</button>
+          </label>
+
+          <button type="submit" class="checkout-button disabled" id="checkout-button" value="checkout">pesan sekarang</button>
         </form>
       </div>
     </section>

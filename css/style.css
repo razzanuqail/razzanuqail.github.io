@@ -236,7 +236,7 @@ body {
   color: #fff;
 }
 
-.reservasi .row form .btn {
+.reservasi .row form .checkout-button {
   margin-top: 3rem;
   display: inline-block;
   padding: 1rem 3rem;
@@ -244,6 +244,11 @@ body {
   color: #fff;
   background-color: var(--primary-color);
   cursor: pointer;
+}
+
+.reservasi .row form .checkout-button.disabled {
+  background-color: #999;
+  cursor: not-allowed;
 }
 
 .reservasi .row .input-group .date-input-wrapper {

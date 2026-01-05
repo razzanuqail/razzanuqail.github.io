@@ -2,8 +2,9 @@
 const navbarNav = document.querySelector(".navbar-nav");
 
 // ketika hamburger menu di klik
-document.querySelector("#hamburger-menu").onclick = () => {
+document.querySelector("#hamburger-menu").onclick = (e) => {
   navbarNav.classList.toggle("active");
+  e.preventDefault();
 };
 
 // klik di luar sidebar untuk menghilangkan navbar
@@ -13,24 +14,3 @@ document.addEventListener("click", function (e) {
     navbarNav.classList.remove("active");
   }
 });
-
-// review section
-
-function addComment() {
-  const name = document.getElementById("username").value;
-  const text = document.getElementById("comment").value;
-
-  if (!name || !text) {
-    alert("Isi nama dan komentar dulu");
-    return;
-  }
-
-  const reviewBox = document.createElement("div");
-  reviewBox.className = "review-item";
-  reviewBox.innerHTML = `<strong style="color:black;">${name}</strong><p style="color:black;">${text}</p>`;
-
-  document.getElementById("reviewList").appendChild(reviewBox);
-
-  document.getElementById("username").value = "";
-  document.getElementById("comment").value = "";
-}
