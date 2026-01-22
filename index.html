@@ -16,11 +16,11 @@
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
-    <!-- Style -->
+    <!-- Style (design) -->
 
     <link rel="stylesheet" href="css/style.css" />
 
-    <!--AlpineJS-->
+    <!--AlpineJS (library)-->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- App -->
@@ -28,7 +28,7 @@
 
   </head>
   <body>
-    <!-- Navbar Start -->
+    <!-- Navbar Start (membuat bar navigasi)--> 
     <nav class="navbar">
       <a href="#" class="navbar-logo">Nong<span>lyst</span></a>
 
@@ -45,7 +45,7 @@
     </nav>
     <!-- Navbar End -->
 
-    <!-- hero section start -->
+    <!-- hero section start (membuat bagian paling atas web atau area utama beserta tombol shortcut untuk ke bagian form reservasi)-->
     <section class="hero" id="home">
       <main class="content">
         <h1>Nonglyst <span>Cafe</span></h1>
@@ -55,13 +55,13 @@
     </section>
     <!-- hero section end -->
 
-    <!-- About section start-->
+    <!-- About section start (membuat halaman kedua yaitu bagian about setelah halaman utama)-->
     <section class="about" id="about">
       <h2><span>Tentang</span> Kami</h2>
 
       <div class="row">
         <div class="about-img">
-          <img src="img/tentang-kami.jpg" alt="About" />
+          <img src="img/tentang-kami.jpg" alt="About" /> <!--ilustrasi gambar cafe-->
         </div>
 
         <div class="content">
@@ -82,7 +82,7 @@
 
     <!-- About section end-->
 
-    <!-- reservation section start -->
+    <!-- reservation section start (membuat form untuk reservasi dan membuat tombol pesan) -->
     <section class="reservasi" id="reservasi">
       <h2><span>Reser</span>vasi</h2>
       <p>Reserve your table</p>
@@ -110,7 +110,7 @@
           </div>
           </label>
 
-          <label for="date">
+          <label for="date"> <!-- men-->
           <div class="input-group">
             <div class="date-input-wrapper">
               <svg
@@ -187,21 +187,23 @@
           class="map"
         ></iframe>
 
-        <form action="">
-          <div class="input-group">
+        <div class="contact-info">
+          <div class="contact-box">
             <i data-feather="user"></i>
-            <input type="text" placeholder="nama" />
+            <span>Nonglyst</span>
           </div>
-          <div class="input-group">
+
+          <div class="contact-box">
             <i data-feather="mail"></i>
-            <input type="text" placeholder="email" />
+            <span>nonglyst@email.com</span>
           </div>
-          <div class="input-group">
+
+          <div class="contact-box">
             <i data-feather="phone"></i>
-            <input type="text" placeholder="no telpon" />
-          </div>
-          <button type="submit" class="btn">kirim pesan</button>
-        </form>
+            <span>0812 xxx xxx</span>
+        </div>
+    </div>
+
       </div>
     </section>
     <!-- contact section end-->
@@ -212,7 +214,7 @@
         <a href="#"><i data-feather="instagram"></i></a>
       </div>
 
-      <div class="links">
+      <div class="links">   
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#reservasi">Reservation</a>

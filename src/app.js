@@ -5,7 +5,7 @@ checkoutButton.disabled = true;
 const form = document.querySelector("#checkoutForm");
 
 form.addEventListener("keyup", function () {
-  for (let i = 0; i < form.elements; i++) {
+  for (let i = 0; i < form.elements.length; i++) {
     if (form.elements[i].value.length !== 0) {
       checkoutButton.classList.remove("disabled");
       checkoutButton.classList.add("disabled");
@@ -17,6 +17,8 @@ form.addEventListener("keyup", function () {
   checkoutButton.disabled = false;
   checkoutButton.classList.remove("disabled");
 });
+
+// menyimpan data form dan mengalihkan ke whatsapp ketika click checkout button
 
 checkoutButton.addEventListener("click", function (e) {
   e.preventDefault();

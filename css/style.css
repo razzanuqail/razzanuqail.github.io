@@ -343,45 +343,52 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   display: flex;
   margin-top: 2rem;
   background-color: #222;
+  min-height: 350px;
 }
 
 .contact .row .map {
-  flex: 1 1 45rem;
-  width: 100%;
-  object-fit: cover;
+  flex: 1;
 }
 
-.contact .row form {
+.contact .row .map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/*.contact .row .contact-box {
   flex: 1 1 45rem;
   padding: 5rem 2rem;
   text-align: center;
 }
 
-.contact .row form .input-group {
+.contact .row .contact-box {
   display: flex;
   align-items: center;
   margin-top: 2rem;
   background-color: #000000;
   border: 1px solid #eee;
   padding-left: 2rem;
+}*/
+
+.contact .row .contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.contact .row form .input-group input {
-  width: 100%;
-  padding: 2rem;
-  font-size: 1.7rem;
-  background: none;
+.contact .row .contact-box {
   color: #fff;
-}
 
-.contact .row form .btn {
-  margin-top: 3rem;
-  display: inline-block;
-  padding: 1rem 3rem;
-  font-size: 1.7rem;
-  color: #fff;
-  background-color: var(--primary-color);
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 20px;
+  border-bottom: 1px solid #333;
+
+  flex: 1;
 }
 
 /* footer section */
@@ -497,14 +504,11 @@ footer .credit a {
 
   .contact .row {
     flex-wrap: wrap;
+    flex-direction: column;
   }
 
   .contact .row .map {
-    height: 30rem;
-  }
-
-  .contact .row form {
-    padding-top: 0;
+    height: 250px;
   }
 }
 
